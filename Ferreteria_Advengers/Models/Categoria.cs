@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Ferreteria_Advengers.Models
 {
-    internal class Proveedore
+    internal class Categoria
     {
         public static DataTable Obtener()
         {
@@ -18,7 +18,7 @@ namespace Ferreteria_Advengers.Models
             try
             {
                 ccn.Conectar();
-                string consulta = "SELECT * FROM proveedores order by Id_proveedor desc";
+                string consulta = "SELECT * FROM categoria order by id_categoria desc";
                 SqlCommand comando = new SqlCommand(consulta, ccn.ObtenerConexion());
                 SqlDataAdapter adapter = new SqlDataAdapter(comando);
                 DataTable dt = new DataTable();
@@ -36,19 +36,15 @@ namespace Ferreteria_Advengers.Models
             }
 
         }
-        public static bool Guardar(string razon_social, string ruc, string telefono, string email, string direccion)
+        public static bool Guardar(string nombre)
         {
             Conexion ccn = new Conexion();
             try
             {
                 ccn.Conectar();
-                string consulta = "INSERT INTO proveedores (razon_social, ruc, telefono, email, direccion) VALUES (@razon_social, @ruc, @telefono, @email, @direccion)";
+                string consulta = "INSERT INTO categoria (nombre) VALUES (@nombre)";
                 SqlCommand comando = new SqlCommand(consulta, ccn.ObtenerConexion());
-                comando.Parameters.AddWithValue("@razon_social", razon_social);
-                comando.Parameters.AddWithValue("@ruc", ruc);
-                comando.Parameters.AddWithValue("@telefono", telefono);
-                comando.Parameters.AddWithValue("@email", email);
-                comando.Parameters.AddWithValue("@direccion", direccion);
+                comando.Parameters.AddWithValue("@nombre", nombre);
                 comando.ExecuteNonQuery();
                 return true;
             }
@@ -62,20 +58,16 @@ namespace Ferreteria_Advengers.Models
                 ccn.Desconectar();
             }
         }
-        public static bool Editar(int id, string razon_social, string ruc, string telefono, string email, string direccion)
+        public static bool Editar(int id, string nombre)
         {
             Conexion ccn = new Conexion();
             try
             {
                 ccn.Conectar();
-                string consulta = "UPDATE proveedores SET razon_social = @razon_social, ruc = @ruc, telefono = @telefono, email = @email, direccion = @direccion WHERE id = @id";
+                string consulta = "UPDATE categoria SET nombre = @nombre WHERE id_categoria = @id";
                 SqlCommand comando = new SqlCommand(consulta, ccn.ObtenerConexion());
                 comando.Parameters.AddWithValue("@id", id);
-                comando.Parameters.AddWithValue("@razon_social", razon_social);
-                comando.Parameters.AddWithValue("@ruc", ruc);
-                comando.Parameters.AddWithValue("@telefono", telefono);
-                comando.Parameters.AddWithValue("@email", email);
-                comando.Parameters.AddWithValue("@direccion", direccion);
+                comando.Parameters.AddWithValue("@nombre", nombre);
                 comando.ExecuteNonQuery();
                 return true;
             }
@@ -95,7 +87,7 @@ namespace Ferreteria_Advengers.Models
             try
             {
                 ccn.Conectar();
-                string consulta = "DELETE FROM proveedores WHERE id = @id";
+                string consulta = "DELETE FROM categoria WHERE id_categoria = @id";
                 SqlCommand comando = new SqlCommand(consulta, ccn.ObtenerConexion());
                 comando.Parameters.AddWithValue("@id", id);
                 comando.ExecuteNonQuery();

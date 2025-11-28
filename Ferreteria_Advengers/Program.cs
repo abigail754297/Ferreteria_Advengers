@@ -16,7 +16,7 @@ namespace Ferreteria_Advengers
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormularioPrincipalFrm());
+            Application.Run(new PrincipalFrm());
         }
     }
 }
