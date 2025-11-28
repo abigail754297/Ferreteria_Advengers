@@ -53,12 +53,14 @@
       <DependentUpon>CategoriasFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Conexion.cs" />
-    <Compile Include="FormularioPrincipalFrm.cs">
+    <Compile Include="Models\Producto.cs" />
+    <Compile Include="PrincipalFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormularioPrincipalFrm.Designer.cs">
-      <DependentUpon>FormularioPrincipalFrm.cs</DependentUpon>
+    <Compile Include="PrincipalFrm.Designer.cs">
+      <DependentUpon>PrincipalFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Categoria.cs" />
     <Compile Include="Models\Proveedore.cs" />
     <Compile Include="ProductosFrm.cs">
       <SubType>Form</SubType>
@@ -77,8 +79,8 @@
     <EmbeddedResource Include="CategoriasFrm.resx">
       <DependentUpon>CategoriasFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormularioPrincipalFrm.resx">
-      <DependentUpon>FormularioPrincipalFrm.cs</DependentUpon>
+    <EmbeddedResource Include="PrincipalFrm.resx">
+      <DependentUpon>PrincipalFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductosFrm.resx">
       <DependentUpon>ProductosFrm.cs</DependentUpon>

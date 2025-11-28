@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Ferreteria_Advengers
 {
-    public partial class FormularioPrincipalFrm : Form
+    public partial class PrincipalFrm : Form
     {
-        public FormularioPrincipalFrm()
+        public PrincipalFrm()
         {
             InitializeComponent();
         }
