@@ -53,6 +53,18 @@
       <DependentUpon>CategoriasFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Conexion.cs" />
+    <Compile Include="Detalle_VentaFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detalle_VentaFrm.Designer.cs">
+      <DependentUpon>Detalle_VentaFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventarioFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventarioFrm.Designer.cs">
+      <DependentUpon>InventarioFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Producto.cs" />
     <Compile Include="PrincipalFrm.cs">
       <SubType>Form</SubType>
@@ -78,6 +90,12 @@
     </Compile>
     <EmbeddedResource Include="CategoriasFrm.resx">
       <DependentUpon>CategoriasFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detalle_VentaFrm.resx">
+      <DependentUpon>Detalle_VentaFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventarioFrm.resx">
+      <DependentUpon>InventarioFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrincipalFrm.resx">
       <DependentUpon>PrincipalFrm.cs</DependentUpon>
