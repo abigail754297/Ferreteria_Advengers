@@ -53,13 +53,12 @@
       <DependentUpon>CategoriasFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Conexion.cs" />
-    <Compile Include="ComprasFrm.cs">
+    <Compile Include="Detalle_compraFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ComprasFrm.Designer.cs">
-      <DependentUpon>ComprasFrm.cs</DependentUpon>
+    <Compile Include="Detalle_compraFrm.Designer.cs">
+      <DependentUpon>Detalle_compraFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Compras.cs" />
     <Compile Include="Detalle_VentaFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,8 +97,9 @@
     <EmbeddedResource Include="CategoriasFrm.resx">
       <DependentUpon>CategoriasFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ComprasFrm.resx">
-      <DependentUpon>ComprasFrm.cs</DependentUpon>
+    <EmbeddedResource Include="Detalle_compraFrm.resx">
+      <DependentUpon>Detalle_compraFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Detalle_VentaFrm.resx">
       <DependentUpon>Detalle_VentaFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,6 +133,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ComprasFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComprasFrm.Designer.cs">
+      <DependentUpon>ComprasFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Compras.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
