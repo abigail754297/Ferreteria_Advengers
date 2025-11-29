@@ -32,7 +32,7 @@ namespace Ferreteria_Advengers
         private void button1_Click(object sender, EventArgs e)
         {
             string numero_factura = txtNum_Fact.Text;
-            string fecha_compra = txtFecha_Com.Text;
+            string fecha_compra = timefech.Value.ToString("yyyy-MM-dd");
             string total = txtTotal.Text;
             string estado = txtEstado.Text;
             bool resultado = false;
@@ -52,7 +52,7 @@ namespace Ferreteria_Advengers
         private void btnEditar_Click(object sender, EventArgs e)
         {
             txtNum_Fact.Text = dataGridView1.CurrentRow.Cells["numero_factura"].Value.ToString();
-            txtFecha_Com.Text = dataGridView1.CurrentRow.Cells["fecha_compra"].Value.ToString();
+            timefech.Text = dataGridView1.CurrentRow.Cells["fecha_compra"].Value.ToString();
             txtTotal.Text = dataGridView1.CurrentRow.Cells["total"].Value.ToString();
             txtEstado.Text = dataGridView1.CurrentRow.Cells["estado"].Value.ToString();
             Id_compra = Convert.ToInt32(dataGridView1.CurrentRow.Cells["id_compra"].Value.ToString());
@@ -63,15 +63,14 @@ namespace Ferreteria_Advengers
             int Id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["id_compra"].Value.ToString());
             if (Id != 0)
             {
-                Categoria.Eliminar(Id);
+                Compras.Eliminar(Id);
             }
-            dataGridView1.DataSource = Categoria.Obtener();
+            dataGridView1.DataSource = Compras.Obtener();
             limpiar();
         }
         private void limpiar()
         {
             txtNum_Fact.Clear();
-            txtFecha_Com.Clear();
             txtTotal.Clear();
             txtEstado.Clear();
             txtNum_Fact.Focus();

@@ -97,6 +97,9 @@
     <EmbeddedResource Include="CategoriasFrm.resx">
       <DependentUpon>CategoriasFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ComprasFrm.resx">
+      <DependentUpon>ComprasFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Detalle_compraFrm.resx">
       <DependentUpon>Detalle_compraFrm.cs</DependentUpon>
     </EmbeddedResource>
