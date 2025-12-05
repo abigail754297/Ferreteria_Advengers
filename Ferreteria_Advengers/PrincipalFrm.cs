@@ -47,7 +47,9 @@ namespace Ferreteria_Advengers
 
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
-            Cuentas_CobrarFrm frm = new Cuentas_CobrarFrm();}
+            Cuentas_CobrarFrm frm = new Cuentas_CobrarFrm();
+            frm.MdiParent = this;
+            frm.Show();
         }
 
         private void toolStripButton7_Click(object sender, EventArgs e)
