@@ -66,5 +66,26 @@ namespace Ferreteria_Advengers
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void toolVentas_Click(object sender, EventArgs e)
+        {
+            Ventasfrm frm = new Ventasfrm();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void toolUsuarios_Click(object sender, EventArgs e)
+        {
+            Usuariofrm frm = new Usuariofrm();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void toolMarcas_Click(object sender, EventArgs e)
+        {
+            Marcafrm frm = new Marcafrm();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }
